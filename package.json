@@ -1,1 +1,7 @@
-{"name":"spark-co-ai-template","private":true}
+{
+  "name": "spark-co-ai-template",
+  "private": true,
+  "dependencies": {
+    "gh": "^2.8.9"
+  }
+}
