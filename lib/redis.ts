@@ -1,16 +1,17 @@
-import { createClient } from 'redis';
+import { Redis } from "@upstash/redis";
 
-const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
-
-export const redis = createClient({
-  url: redisUrl,
-});
-
-redis.on('error', (err) => console.error('Redis Client Error', err));
-
-// Connect to Redis
-if (!redis.isOpen) {
-  redis.connect().catch(console.error);
+if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
+  throw new Error(
+    "Missing Upstash Redis REST environment variables: UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN"
+  );
 }
 
-export default redis;
+// Create a Redis client using the Upstash REST API
+export const redis = new Redis({
+  url: process.env.UPSTASH_REDIS_REST_URL,
+  token: process.env.UPSTASH_REDIS_REST_TOKEN,
+});
+
+// Example usage:
+// await redis.set("key", "value");
+// const value = await redis.get("key");
