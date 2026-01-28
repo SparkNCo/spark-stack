@@ -16,7 +16,7 @@ Read that file before making changes.
 
 ⸻
 
-1. Prerequisites
+# Prerequisites
 
 You’ll need:
 	•	Node.js 18+
@@ -31,7 +31,7 @@ You’ll need:
 
 ⸻
 
-2. Environment variables
+# Environment variables
 
 Copy the example file:
 
@@ -39,22 +39,17 @@ cp .env.example .env.local
 
 Typical variables:
 
-# Database
 DATABASE_URL=postgresql://...
 
-# Supabase
 SUPABASE_URL=
 SUPABASE_ANON_KEY=
 SUPABASE_SERVICE_ROLE_KEY=
 
-# Redis
 UPSTASH_REDIS_REST_URL=
 UPSTASH_REDIS_REST_TOKEN=
 
-# Email
 RESEND_API_KEY=
 
-# Analytics
 POSTHOG_KEY=
 POSTHOG_HOST=https://app.posthog.com
 
@@ -63,7 +58,7 @@ Rule: Secrets are never committed.
 
 ⸻
 
-3. Running the project locally
+# Running the project locally
 
 Install dependencies
 
@@ -92,7 +87,7 @@ Example:
 
 ⸻
 
-4. Deploying the UI (Vercel)
+# Deploying the UI (Vercel)
 	1.	Push the repo to GitHub
 	2.	In Vercel:
 	•	Import the repository
@@ -111,7 +106,7 @@ Backend logic lives in Supabase Functions.
 
 ⸻
 
-5. Deploying backend functions (Supabase)
+# Deploying backend functions (Supabase)
 
 Login & link project
 
@@ -130,7 +125,7 @@ Each folder under functions/ is a service boundary.
 
 ⸻
 
-6. Database schema & migrations (Prisma)
+# Database schema & migrations (Prisma)
 
 Generate Prisma client
 
@@ -154,7 +149,7 @@ UI code never talks to the database directly.
 
 ⸻
 
-7. Zod → OpenAPI docs
+# Zod → OpenAPI docs
 
 How it works
 	•	Public API schemas are written in Zod
@@ -185,7 +180,7 @@ You can then:
 
 ⸻
 
-8. Email system (Resend + react-email)
+# Email system (Resend + react-email)
 
 Structure
 
@@ -203,7 +198,7 @@ This keeps secrets safe and audit-friendly.
 
 ⸻
 
-9. Caching (Upstash Redis)
+# Caching (Upstash Redis)
 
 Redis is used for:
 	•	Read-heavy endpoints
@@ -217,7 +212,7 @@ Rules
 
 ⸻
 
-10. Analytics & logging (PostHog)
+# Analytics & logging (PostHog)
 
 PostHog is used for:
 	•	Client-side analytics
@@ -235,7 +230,7 @@ This allows:
 
 ⸻
 
-11. Testing (Playwright)
+# Testing (Playwright)
 
 Structure
 
@@ -255,7 +250,7 @@ Tests:
 
 ⸻
 
-12. Diagrams & documentation
+# Diagrams & documentation
 
 Mermaid diagrams
 	•	System-level: workflows/
@@ -265,39 +260,4 @@ These diagrams are:
 	•	Part of the source of truth
 	•	Required for non-trivial features
 	•	AI-readable and human-readable
-
-⸻
-
-13. How AI tools should interact with this repo
-
-See AI.md.
-
-Key ideas:
-	•	The repo is the architecture
-	•	AI adds code inside existing boundaries
-	•	Prefer adding files over refactoring
-	•	Ask when unsure
-
-⸻
-
-14. Recommended workflow
-	1.	Architecture decisions → humans
-	2.	New scaffolding → v0
-	3.	Refactors & enforcement → Cursor
-	4.	Validation → CI + Playwright
-
-⸻
-
-15. Summary
-
-This repo is designed to:
-	•	Scale across teams and clients
-	•	Prevent architectural drift
-	•	Work safely with AI code generation
-	•	Support long-term maintenance
-
-If you’re adding something new:
-	•	Find the closest existing example
-	•	Follow it exactly
-	•	Document intent with diagrams
 
