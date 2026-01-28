@@ -1,4 +1,4 @@
-Spark & Co — AI-Governed App Template
+# Spark Stack
 
 This repository is a full-stack production template designed for teams using:
 	•	Next.js for the UI
@@ -16,7 +16,7 @@ Read that file before making changes.
 
 ⸻
 
-# Prerequisites
+## Prerequisites
 
 You’ll need:
 	•	Node.js 18+
@@ -31,7 +31,7 @@ You’ll need:
 
 ⸻
 
-# Environment variables
+## Environment variables
 
 Copy the example file:
 
@@ -58,7 +58,7 @@ Rule: Secrets are never committed.
 
 ⸻
 
-# Running the project locally
+## Running the project locally
 
 Install dependencies
 
@@ -87,7 +87,7 @@ Example:
 
 ⸻
 
-# Deploying the UI (Vercel)
+## Deploying the UI (Vercel)
 	1.	Push the repo to GitHub
 	2.	In Vercel:
 	•	Import the repository
@@ -106,7 +106,7 @@ Backend logic lives in Supabase Functions.
 
 ⸻
 
-# Deploying backend functions (Supabase)
+## Deploying backend functions (Supabase)
 
 Login & link project
 
@@ -125,7 +125,7 @@ Each folder under functions/ is a service boundary.
 
 ⸻
 
-# Database schema & migrations (Prisma)
+## Database schema & migrations (Prisma)
 
 Generate Prisma client
 
@@ -149,7 +149,7 @@ UI code never talks to the database directly.
 
 ⸻
 
-# Zod → OpenAPI docs
+## Zod → OpenAPI docs
 
 How it works
 	•	Public API schemas are written in Zod
@@ -180,7 +180,7 @@ You can then:
 
 ⸻
 
-# Email system (Resend + react-email)
+## Email system (Resend + react-email)
 
 Structure
 
@@ -198,7 +198,7 @@ This keeps secrets safe and audit-friendly.
 
 ⸻
 
-# Caching (Upstash Redis)
+## Caching (Upstash Redis)
 
 Redis is used for:
 	•	Read-heavy endpoints
@@ -212,7 +212,7 @@ Rules
 
 ⸻
 
-# Analytics & logging (PostHog)
+## Analytics & logging (PostHog)
 
 PostHog is used for:
 	•	Client-side analytics
@@ -230,7 +230,7 @@ This allows:
 
 ⸻
 
-# Testing (Playwright)
+## Testing (Playwright)
 
 Structure
 
@@ -250,7 +250,7 @@ Tests:
 
 ⸻
 
-# Diagrams & documentation
+## Diagrams & documentation
 
 Mermaid diagrams
 	•	System-level: workflows/

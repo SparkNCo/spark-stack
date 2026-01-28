@@ -1,7 +1,31 @@
 {
-  "name": "spark-co-ai-template",
+  "name": "spark-stack",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "functions:local": "supabase start && supabase functions serve",
+    "functions:deploy": "supabase functions deploy",
+    "db:migrate": "npx prisma format && npx prisma migrate dev",
+    "test": "playwright test"
+  },
   "dependencies": {
-    "gh": "^2.8.9"
+    "@asteasolutions/zod-to-openapi": "^8.4.0",
+    "@prisma/client": "^7.3.0",
+    "@tanstack/react-query": "^5.90.20",
+    "dotenv": "^17.2.3",
+    "next": "^16.1.6",
+    "posthog-js": "^1.335.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-email": "^5.2.5",
+    "resend": "^6.9.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "playwright": "^1.58.0",
+    "prisma": "^6.19.2",
+    "typescript": "^5.9.3"
   }
 }
