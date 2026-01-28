@@ -24,7 +24,7 @@
       "@/prisma/*": ["prisma/*"]
     },
 
-    "types": ["node"]
+    "jsx": "preserve"
   },
   "include": [
     "app",
